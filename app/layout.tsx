@@ -8,8 +8,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Streamline | Modern SaaS Platform",
-  description: "Simplify your workflow with our intuitive platform. Built for teams who value clarity and efficiency.",
+  title: "Waitly | Build Viral Waitlist Pages",
+  description:
+    "Create beautiful waitlist pages in minutes. Capture emails, reward referrals, and build anticipation before you launch. Free plan available.",
+  keywords: [
+    "waitlist",
+    "launch page",
+    "email capture",
+    "referral marketing",
+    "pre-launch",
+    "viral waitlist",
+  ],
 };
 
 export default function RootLayout({

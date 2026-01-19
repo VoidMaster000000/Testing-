@@ -10,13 +10,17 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const navLinks = [
   { href: "#features", label: "Features" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState<string | null>(null);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault();
     setActiveLink(href);
 
@@ -24,10 +28,8 @@ export default function Navbar() {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      // Get target position
-      const targetPosition = targetElement.offsetTop - 80; // Account for navbar height
+      const targetPosition = targetElement.offsetTop - 80;
 
-      // Animate scroll with GSAP
       gsap.to(window, {
         duration: 1,
         scrollTo: { y: targetPosition, autoKill: false },
@@ -46,7 +48,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-semibold text-text-primary">
-          Streamline
+          Waitly
         </Link>
 
         {/* Nav Links */}
@@ -61,14 +63,15 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
             >
               {link.label}
-              {/* Animated underline */}
               <motion.span
                 className="absolute -bottom-1 left-0 h-0.5 bg-royal-garnet rounded-full"
                 initial={{ width: 0 }}
                 variants={{
                   hover: { width: "100%" },
                 }}
-                animate={activeLink === link.href ? { width: "100%" } : { width: 0 }}
+                animate={
+                  activeLink === link.href ? { width: "100%" } : { width: 0 }
+                }
                 transition={{ duration: 0.3, ease: "easeOut" }}
               />
             </motion.a>
@@ -81,7 +84,7 @@ export default function Navbar() {
           whileTap={{ scale: 0.98 }}
           className="px-5 py-2.5 bg-royal-garnet text-white text-sm font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
         >
-          Get Started
+          Start Free
         </motion.button>
       </div>
     </motion.nav>

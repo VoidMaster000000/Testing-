@@ -10,7 +10,6 @@ export default function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate headline characters
       if (headlineRef.current) {
         const chars = headlineRef.current.querySelectorAll(".char");
         gsap.fromTo(
@@ -18,7 +17,7 @@ export default function Hero() {
           {
             opacity: 0,
             y: 50,
-            rotateX: -90
+            rotateX: -90,
           },
           {
             opacity: 1,
@@ -32,7 +31,6 @@ export default function Hero() {
         );
       }
 
-      // Animate tagline
       if (taglineRef.current) {
         gsap.fromTo(
           taglineRef.current,
@@ -42,7 +40,7 @@ export default function Hero() {
             y: 0,
             duration: 0.8,
             ease: "power3.out",
-            delay: 1
+            delay: 1,
           }
         );
       }
@@ -51,7 +49,7 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
-  const headlineText = "Simplify your workflow.";
+  const headlineText = "Launch with hype.";
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-32 relative overflow-hidden">
@@ -59,6 +57,19 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-cashmere-light/30 to-background pointer-events-none" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-royal-garnet/10 border border-royal-garnet/20 mb-8"
+        >
+          <span className="w-2 h-2 rounded-full bg-royal-garnet animate-pulse" />
+          <span className="text-sm text-royal-garnet font-medium">
+            Over 2,000 launches powered
+          </span>
+        </motion.div>
+
         {/* Headline with GSAP word animation */}
         <h1
           ref={headlineRef}
@@ -88,8 +99,8 @@ export default function Hero() {
           ref={taglineRef}
           className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 opacity-0"
         >
-          Built for teams who value clarity and efficiency.
-          Stop juggling tools and start focusing on what matters.
+          Create beautiful waitlist pages in minutes. Capture emails, reward
+          referrals, and build anticipation before you launch.
         </p>
 
         {/* CTA Buttons */}
@@ -104,16 +115,26 @@ export default function Hero() {
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 bg-royal-garnet text-white text-base font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
           >
-            Start Free Trial
+            Create Your Waitlist
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 bg-transparent text-royal-garnet text-base font-medium rounded-full border border-royal-garnet/30 hover:bg-cashmere-light/30 transition-colors duration-200"
           >
-            Watch Demo
+            See Examples
           </motion.button>
         </motion.div>
+
+        {/* Social proof */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.6 }}
+          className="mt-8 text-sm text-text-secondary"
+        >
+          Free plan available · No credit card required
+        </motion.p>
       </div>
     </section>
   );

@@ -14,7 +14,6 @@ export default function CTA() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Parallax background effect
       if (bgRef.current) {
         gsap.fromTo(
           bgRef.current,
@@ -32,7 +31,6 @@ export default function CTA() {
         );
       }
 
-      // Content scale-in effect
       if (contentRef.current) {
         gsap.fromTo(
           contentRef.current,
@@ -73,10 +71,11 @@ export default function CTA() {
         className="relative z-10 max-w-3xl mx-auto text-center"
       >
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-text-primary mb-6">
-          Ready to get started?
+          Ready to build hype?
         </h2>
         <p className="text-lg text-text-secondary mb-10 max-w-xl mx-auto">
-          Join thousands of teams already using Streamline to simplify their workflow.
+          Join thousands of founders using Waitly to launch their products with
+          a bang. Start free, no credit card required.
         </p>
 
         {/* Email signup form */}
@@ -102,7 +101,7 @@ export default function CTA() {
         </motion.div>
 
         <p className="mt-6 text-sm text-text-secondary">
-          Free 14-day trial. No credit card required.
+          Free plan includes 100 signups · Upgrade anytime
         </p>
       </div>
     </section>

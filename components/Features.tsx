@@ -1,26 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, Shield, LayoutGrid } from "lucide-react";
+import { Mail, Gift, BarChart3, Palette, Share2, Zap } from "lucide-react";
 
 const features = [
   {
+    icon: Mail,
+    title: "Email Capture",
+    description:
+      "Collect emails with beautiful, high-converting signup forms. Export to Mailchimp, ConvertKit, or CSV anytime.",
+  },
+  {
+    icon: Gift,
+    title: "Referral Rewards",
+    description:
+      "Turn signups into promoters. Reward users who refer friends with early access, discounts, or exclusive perks.",
+  },
+  {
+    icon: BarChart3,
+    title: "Real-time Analytics",
+    description:
+      "Track signups, referrals, and conversion rates. See where your traffic comes from and optimize.",
+  },
+  {
+    icon: Palette,
+    title: "Custom Branding",
+    description:
+      "Match your brand perfectly. Custom colors, fonts, logos, and domains. No Waitly branding on paid plans.",
+  },
+  {
+    icon: Share2,
+    title: "Social Sharing",
+    description:
+      "Built-in social sharing buttons and unique referral links. Make it easy for users to spread the word.",
+  },
+  {
     icon: Zap,
-    title: "Lightning Fast",
+    title: "Instant Setup",
     description:
-      "Built for speed. Every interaction feels instant, keeping your team in flow.",
-  },
-  {
-    icon: Shield,
-    title: "Secure by Default",
-    description:
-      "Enterprise-grade security with end-to-end encryption and SOC 2 compliance.",
-  },
-  {
-    icon: LayoutGrid,
-    title: "Flexible Layouts",
-    description:
-      "Customize your workspace. Drag, drop, and arrange everything your way.",
+      "Go live in under 5 minutes. No coding required. Just add your copy, customize, and share your link.",
   },
 ];
 
@@ -29,7 +47,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
       delayChildren: 0.1,
     },
   },
@@ -60,10 +78,11 @@ export default function Features() {
           className="text-center mb-20"
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-4">
-            Everything you need
+            Everything you need to launch
           </h2>
           <p className="text-text-secondary max-w-xl mx-auto">
-            Powerful features that help your team work smarter, not harder.
+            Powerful features to build hype, capture leads, and create viral
+            growth before your product is even ready.
           </p>
         </motion.div>
 
@@ -73,7 +92,7 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {features.map((feature, index) => (
             <motion.div
