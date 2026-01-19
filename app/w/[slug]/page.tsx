@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useParams, useSearchParams } from "next/navigation";
-import { Check, Share2, Copy, Twitter, Linkedin } from "lucide-react";
+import { Check, Share2, Copy, Linkedin } from "lucide-react";
 import { getWaitlist, addSubscriber, type Waitlist, type Subscriber } from "@/lib/waitlist";
 import Link from "next/link";
 
@@ -67,11 +67,11 @@ export default function WaitlistPage() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const shareOnTwitter = () => {
+  const shareOnX = () => {
     const text = `I just joined the waitlist for ${waitlist?.name}! Join me:`;
     const url = getReferralLink();
     window.open(
-      `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
+      `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
       "_blank"
     );
   };
@@ -243,11 +243,13 @@ export default function WaitlistPage() {
               {/* Social share buttons */}
               <div className="flex items-center justify-center gap-3">
                 <button
-                  onClick={shareOnTwitter}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#1DA1F2] text-white text-sm rounded-full hover:opacity-90 transition-opacity"
+                  onClick={shareOnX}
+                  className="flex items-center gap-2 px-4 py-2 bg-black text-white text-sm rounded-full hover:opacity-90 transition-opacity"
                 >
-                  <Twitter className="w-4 h-4" />
-                  Tweet
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  Post
                 </button>
                 <button
                   onClick={shareOnLinkedIn}
