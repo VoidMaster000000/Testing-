@@ -23,28 +23,28 @@ export interface UserData {
 const STORAGE_KEY = "subtrackr_data";
 
 // Popular subscription services with their details
-// Using Simple Icons CDN for brand logos: https://cdn.simpleicons.org/{iconname}/{color}
+// Using logo.dev API for brand logos: https://img.logo.dev/{domain}
 export const popularServices: Partial<Subscription>[] = [
-  { name: "Netflix", price: 15.49, billingCycle: "monthly", category: "Streaming", color: "#E50914", logo: "https://cdn.simpleicons.org/netflix/E50914", cancelUrl: "https://www.netflix.com/cancelplan" },
-  { name: "Spotify", price: 10.99, billingCycle: "monthly", category: "Music", color: "#1DB954", logo: "https://cdn.simpleicons.org/spotify/1DB954", cancelUrl: "https://www.spotify.com/account/subscription/" },
-  { name: "Disney+", price: 13.99, billingCycle: "monthly", category: "Streaming", color: "#113CCF", logo: "https://cdn.simpleicons.org/disneyplus/113CCF", cancelUrl: "https://www.disneyplus.com/account" },
-  { name: "Amazon Prime", price: 14.99, billingCycle: "monthly", category: "Shopping", color: "#FF9900", logo: "https://cdn.simpleicons.org/amazon/FF9900", cancelUrl: "https://www.amazon.com/manageprime" },
-  { name: "YouTube Premium", price: 13.99, billingCycle: "monthly", category: "Streaming", color: "#FF0000", logo: "https://cdn.simpleicons.org/youtube/FF0000", cancelUrl: "https://www.youtube.com/paid_memberships" },
-  { name: "Apple Music", price: 10.99, billingCycle: "monthly", category: "Music", color: "#FA243C", logo: "https://cdn.simpleicons.org/applemusic/FA243C", cancelUrl: "https://support.apple.com/en-us/HT202039" },
-  { name: "HBO Max", price: 15.99, billingCycle: "monthly", category: "Streaming", color: "#000000", logo: "https://cdn.simpleicons.org/max/000000", cancelUrl: "https://www.max.com/account" },
-  { name: "Hulu", price: 7.99, billingCycle: "monthly", category: "Streaming", color: "#1CE783", logo: "https://cdn.simpleicons.org/hulu/1CE783", cancelUrl: "https://secure.hulu.com/account" },
-  { name: "Adobe Creative Cloud", price: 54.99, billingCycle: "monthly", category: "Software", color: "#FF0000", logo: "https://cdn.simpleicons.org/adobe/FF0000", cancelUrl: "https://account.adobe.com/plans" },
-  { name: "Microsoft 365", price: 9.99, billingCycle: "monthly", category: "Software", color: "#0078D4", logo: "https://cdn.simpleicons.org/microsoft/0078D4", cancelUrl: "https://account.microsoft.com/services" },
-  { name: "Notion", price: 10.00, billingCycle: "monthly", category: "Productivity", color: "#000000", logo: "https://cdn.simpleicons.org/notion/000000", cancelUrl: "https://www.notion.so/my-account" },
-  { name: "Slack", price: 8.75, billingCycle: "monthly", category: "Productivity", color: "#4A154B", logo: "https://cdn.simpleicons.org/slack/4A154B", cancelUrl: "https://slack.com/account/settings" },
-  { name: "Dropbox", price: 11.99, billingCycle: "monthly", category: "Storage", color: "#0061FF", logo: "https://cdn.simpleicons.org/dropbox/0061FF", cancelUrl: "https://www.dropbox.com/account/plan" },
-  { name: "iCloud+", price: 2.99, billingCycle: "monthly", category: "Storage", color: "#3693F3", logo: "https://cdn.simpleicons.org/icloud/3693F3", cancelUrl: "https://support.apple.com/en-us/HT201318" },
-  { name: "ChatGPT Plus", price: 20.00, billingCycle: "monthly", category: "AI Tools", color: "#10A37F", logo: "https://cdn.simpleicons.org/openai/10A37F", cancelUrl: "https://chat.openai.com/settings/subscription" },
-  { name: "Claude Pro", price: 20.00, billingCycle: "monthly", category: "AI Tools", color: "#D97757", logo: "https://cdn.simpleicons.org/anthropic/D97757", cancelUrl: "https://claude.ai/settings" },
+  { name: "Netflix", price: 15.49, billingCycle: "monthly", category: "Streaming", color: "#E50914", logo: "https://img.logo.dev/netflix.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.netflix.com/cancelplan" },
+  { name: "Spotify", price: 10.99, billingCycle: "monthly", category: "Music", color: "#1DB954", logo: "https://img.logo.dev/spotify.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.spotify.com/account/subscription/" },
+  { name: "Disney+", price: 13.99, billingCycle: "monthly", category: "Streaming", color: "#113CCF", logo: "https://img.logo.dev/disneyplus.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.disneyplus.com/account" },
+  { name: "Amazon Prime", price: 14.99, billingCycle: "monthly", category: "Shopping", color: "#FF9900", logo: "https://img.logo.dev/amazon.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.amazon.com/manageprime" },
+  { name: "YouTube Premium", price: 13.99, billingCycle: "monthly", category: "Streaming", color: "#FF0000", logo: "https://img.logo.dev/youtube.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.youtube.com/paid_memberships" },
+  { name: "Apple Music", price: 10.99, billingCycle: "monthly", category: "Music", color: "#FA243C", logo: "https://img.logo.dev/apple.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://support.apple.com/en-us/HT202039" },
+  { name: "HBO Max", price: 15.99, billingCycle: "monthly", category: "Streaming", color: "#000000", logo: "https://img.logo.dev/max.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.max.com/account" },
+  { name: "Hulu", price: 7.99, billingCycle: "monthly", category: "Streaming", color: "#1CE783", logo: "https://img.logo.dev/hulu.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://secure.hulu.com/account" },
+  { name: "Adobe Creative Cloud", price: 54.99, billingCycle: "monthly", category: "Software", color: "#FF0000", logo: "https://img.logo.dev/adobe.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://account.adobe.com/plans" },
+  { name: "Microsoft 365", price: 9.99, billingCycle: "monthly", category: "Software", color: "#0078D4", logo: "https://img.logo.dev/microsoft.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://account.microsoft.com/services" },
+  { name: "Notion", price: 10.00, billingCycle: "monthly", category: "Productivity", color: "#000000", logo: "https://img.logo.dev/notion.so?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.notion.so/my-account" },
+  { name: "Slack", price: 8.75, billingCycle: "monthly", category: "Productivity", color: "#4A154B", logo: "https://img.logo.dev/slack.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://slack.com/account/settings" },
+  { name: "Dropbox", price: 11.99, billingCycle: "monthly", category: "Storage", color: "#0061FF", logo: "https://img.logo.dev/dropbox.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.dropbox.com/account/plan" },
+  { name: "iCloud+", price: 2.99, billingCycle: "monthly", category: "Storage", color: "#3693F3", logo: "https://img.logo.dev/icloud.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://support.apple.com/en-us/HT201318" },
+  { name: "ChatGPT Plus", price: 20.00, billingCycle: "monthly", category: "AI Tools", color: "#10A37F", logo: "https://img.logo.dev/openai.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://chat.openai.com/settings/subscription" },
+  { name: "Claude Pro", price: 20.00, billingCycle: "monthly", category: "AI Tools", color: "#D97757", logo: "https://img.logo.dev/anthropic.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://claude.ai/settings" },
   { name: "Gym Membership", price: 30.00, billingCycle: "monthly", category: "Health", color: "#FF6B6B" },
-  { name: "NordVPN", price: 12.99, billingCycle: "monthly", category: "Security", color: "#4687FF", logo: "https://cdn.simpleicons.org/nordvpn/4687FF", cancelUrl: "https://my.nordaccount.com/dashboard/nordvpn/" },
-  { name: "Canva", price: 12.99, billingCycle: "monthly", category: "Design", color: "#00C4CC", logo: "https://cdn.simpleicons.org/canva/00C4CC", cancelUrl: "https://www.canva.com/settings/billing-and-teams" },
-  { name: "Grammarly", price: 12.00, billingCycle: "monthly", category: "Productivity", color: "#15C39A", logo: "https://cdn.simpleicons.org/grammarly/15C39A", cancelUrl: "https://account.grammarly.com/subscription" },
+  { name: "NordVPN", price: 12.99, billingCycle: "monthly", category: "Security", color: "#4687FF", logo: "https://img.logo.dev/nordvpn.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://my.nordaccount.com/dashboard/nordvpn/" },
+  { name: "Canva", price: 12.99, billingCycle: "monthly", category: "Design", color: "#00C4CC", logo: "https://img.logo.dev/canva.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://www.canva.com/settings/billing-and-teams" },
+  { name: "Grammarly", price: 12.00, billingCycle: "monthly", category: "Productivity", color: "#15C39A", logo: "https://img.logo.dev/grammarly.com?token=pk_X-1ZO13GSgeOoUrIuJ6GMQ", cancelUrl: "https://account.grammarly.com/subscription" },
 ];
 
 export const categories = [
