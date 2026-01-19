@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://subtrackr.app/sitemap.xml",
+    sitemap: "https://subtrackr-swart-five.vercel.app/sitemap.xml",
   };
 }

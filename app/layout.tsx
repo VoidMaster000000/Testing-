@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://subtrackr.app"),
+  metadataBase: new URL("https://subtrackr-swart-five.vercel.app"),
   title: {
     default: "SubTrackr | Track & Manage All Your Subscriptions",
     template: "%s | SubTrackr",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://subtrackr.app",
+    url: "https://subtrackr-swart-five.vercel.app",
     siteName: "SubTrackr",
     title: "SubTrackr | Track & Manage All Your Subscriptions",
     description:
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     creator: "@subtrackr",
   },
   alternates: {
-    canonical: "https://subtrackr.app",
+    canonical: "https://subtrackr-swart-five.vercel.app",
   },
   category: "Finance",
 };
