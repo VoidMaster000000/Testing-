@@ -110,20 +110,22 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <motion.button
+          <motion.a
+            href="/create"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 bg-royal-garnet text-white text-base font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
           >
             Create Your Waitlist
-          </motion.button>
-          <motion.button
+          </motion.a>
+          <motion.a
+            href="/dashboard"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 bg-transparent text-royal-garnet text-base font-medium rounded-full border border-royal-garnet/30 hover:bg-cashmere-light/30 transition-colors duration-200"
           >
-            See Examples
-          </motion.button>
+            View Dashboard
+          </motion.a>
         </motion.div>
 
         {/* Social proof */}

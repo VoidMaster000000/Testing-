@@ -79,13 +79,14 @@ export default function Navbar() {
         </div>
 
         {/* CTA Button */}
-        <motion.button
+        <motion.a
+          href="/create"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="px-5 py-2.5 bg-royal-garnet text-white text-sm font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
         >
           Start Free
-        </motion.button>
+        </motion.a>
       </div>
     </motion.nav>
   );
