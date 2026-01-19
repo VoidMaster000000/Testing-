@@ -8,17 +8,70 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Waitly | Build Viral Waitlist Pages",
+  metadataBase: new URL("https://subtrackr.app"),
+  title: {
+    default: "SubTrackr | Track & Manage All Your Subscriptions",
+    template: "%s | SubTrackr",
+  },
   description:
-    "Create beautiful waitlist pages in minutes. Capture emails, reward referrals, and build anticipation before you launch. Free plan available.",
+    "Stop wasting money on forgotten subscriptions. Track all your recurring payments, get renewal reminders, and see exactly where your money goes. Free subscription tracker.",
   keywords: [
-    "waitlist",
-    "launch page",
-    "email capture",
-    "referral marketing",
-    "pre-launch",
-    "viral waitlist",
+    "subscription tracker",
+    "subscription manager",
+    "recurring payments",
+    "cancel subscriptions",
+    "track subscriptions",
+    "monthly expenses",
+    "subscription spending",
+    "Netflix tracker",
+    "Spotify tracker",
+    "manage subscriptions",
+    "subscription reminder",
+    "billing tracker",
   ],
+  authors: [{ name: "SubTrackr" }],
+  creator: "SubTrackr",
+  publisher: "SubTrackr",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://subtrackr.app",
+    siteName: "SubTrackr",
+    title: "SubTrackr | Track & Manage All Your Subscriptions",
+    description:
+      "Stop wasting money on forgotten subscriptions. Track all your recurring payments, get renewal reminders, and see exactly where your money goes.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SubTrackr - Subscription Tracker",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SubTrackr | Track & Manage All Your Subscriptions",
+    description:
+      "Stop wasting money on forgotten subscriptions. Track all your recurring payments and get renewal reminders.",
+    images: ["/og-image.png"],
+    creator: "@subtrackr",
+  },
+  alternates: {
+    canonical: "https://subtrackr.app",
+  },
+  category: "Finance",
 };
 
 export default function RootLayout({
