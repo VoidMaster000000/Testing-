@@ -154,22 +154,21 @@ export default function AddSubscription() {
                     className="p-4 bg-background rounded-xl border border-border hover:border-royal-garnet/30 transition-colors text-left"
                   >
                     <div className="flex items-center gap-3">
-                      {service.logo ? (
-                        <img
-                          src={service.logo}
-                          alt={service.name}
-                          className="w-10 h-10 rounded-lg object-contain bg-white p-1"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                            e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                          }}
-                        />
-                      ) : null}
-                      <div
-                        className={`w-10 h-10 rounded-lg flex items-center justify-center text-white font-semibold ${service.logo ? 'hidden' : ''}`}
-                        style={{ backgroundColor: service.color || "#7B2D42" }}
-                      >
-                        {service.name?.charAt(0)}
+                      <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-white border border-border flex items-center justify-center">
+                        {service.logo ? (
+                          <img
+                            src={service.logo}
+                            alt={service.name}
+                            className="w-8 h-8 object-contain"
+                          />
+                        ) : (
+                          <div
+                            className="w-full h-full flex items-center justify-center text-white font-semibold"
+                            style={{ backgroundColor: service.color || "#7B2D42" }}
+                          >
+                            {service.name?.charAt(0)}
+                          </div>
+                        )}
                       </div>
                       <div>
                         <p className="font-medium text-text-primary text-sm">
