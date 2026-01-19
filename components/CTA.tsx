@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,37 +72,43 @@ export default function CTA() {
         className="relative z-10 max-w-3xl mx-auto text-center"
       >
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-text-primary mb-6">
-          Ready to build hype?
+          Start saving today.
         </h2>
         <p className="text-lg text-text-secondary mb-10 max-w-xl mx-auto">
-          Join thousands of founders using Waitly to launch their products with
-          a bang. Start free, no credit card required.
+          The average person wastes $200/year on forgotten subscriptions.
+          Take control of your spending in under 2 minutes.
         </p>
 
-        {/* Email signup form */}
+        {/* CTA buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="w-full sm:flex-1 px-5 py-4 rounded-full bg-background border border-border text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:border-royal-garnet/40 focus:ring-2 focus:ring-royal-garnet/10 transition-all duration-200"
-          />
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full sm:w-auto px-8 py-4 bg-royal-garnet text-white text-base font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200 whitespace-nowrap"
-          >
-            Get Started
-          </motion.button>
+          <Link href="/add">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-8 py-4 bg-royal-garnet text-white text-base font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200 whitespace-nowrap"
+            >
+              Add Your First Subscription
+            </motion.button>
+          </Link>
+          <Link href="/dashboard">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-8 py-4 bg-transparent text-royal-garnet text-base font-medium rounded-full border border-royal-garnet/30 hover:bg-cashmere-light/30 transition-colors duration-200 whitespace-nowrap"
+            >
+              View Dashboard
+            </motion.button>
+          </Link>
         </motion.div>
 
         <p className="mt-6 text-sm text-text-secondary">
-          Free plan includes 100 signups · Upgrade anytime
+          100% free · No account needed · Your data stays private
         </p>
       </div>
     </section>

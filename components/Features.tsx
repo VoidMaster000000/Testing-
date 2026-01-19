@@ -1,44 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Gift, BarChart3, Palette, Share2, Zap } from "lucide-react";
+import {
+  CreditCard,
+  Bell,
+  PieChart,
+  Scissors,
+  Calendar,
+  Shield,
+} from "lucide-react";
 
 const features = [
   {
-    icon: Mail,
-    title: "Email Capture",
+    icon: CreditCard,
+    title: "Track Everything",
     description:
-      "Collect emails with beautiful, high-converting signup forms. Export to Mailchimp, ConvertKit, or CSV anytime.",
+      "Add all your subscriptions in seconds. Netflix, Spotify, gym, software - we've got 20+ popular services pre-loaded with cancel links.",
   },
   {
-    icon: Gift,
-    title: "Referral Rewards",
+    icon: Bell,
+    title: "Never Forget Renewals",
     description:
-      "Turn signups into promoters. Reward users who refer friends with early access, discounts, or exclusive perks.",
+      "Get alerts before your subscriptions renew. No more surprise charges. Know exactly when each payment is coming.",
   },
   {
-    icon: BarChart3,
-    title: "Real-time Analytics",
+    icon: PieChart,
+    title: "See Your Spending",
     description:
-      "Track signups, referrals, and conversion rates. See where your traffic comes from and optimize.",
+      "Visualize where your money goes. Monthly, yearly, by category. Finally understand your true subscription costs.",
   },
   {
-    icon: Palette,
-    title: "Custom Branding",
+    icon: Scissors,
+    title: "One-Click Cancel Links",
     description:
-      "Match your brand perfectly. Custom colors, fonts, logos, and domains. No Waitly branding on paid plans.",
+      "Direct links to cancel pages for popular services. No more hunting through settings. Cancel in seconds, not minutes.",
   },
   {
-    icon: Share2,
-    title: "Social Sharing",
+    icon: Calendar,
+    title: "Upcoming View",
     description:
-      "Built-in social sharing buttons and unique referral links. Make it easy for users to spread the word.",
+      "See what's due this week at a glance. Plan ahead and decide what stays and what goes before you're charged.",
   },
   {
-    icon: Zap,
-    title: "Instant Setup",
+    icon: Shield,
+    title: "Privacy First",
     description:
-      "Go live in under 5 minutes. No coding required. Just add your copy, customize, and share your link.",
+      "Your data stays on your device. No account needed. No bank connections. Just simple, private subscription tracking.",
   },
 ];
 
@@ -78,11 +85,11 @@ export default function Features() {
           className="text-center mb-20"
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-text-primary mb-4">
-            Everything you need to launch
+            Everything you need to save money
           </h2>
           <p className="text-text-secondary max-w-xl mx-auto">
-            Powerful features to build hype, capture leads, and create viral
-            growth before your product is even ready.
+            Simple tools to track, manage, and cancel subscriptions you don&apos;t need.
+            No complexity. No bank connections. Just clarity.
           </p>
         </motion.div>
 

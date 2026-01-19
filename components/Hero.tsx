@@ -49,7 +49,7 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
-  const headlineText = "Launch with hype.";
+  const headlineText = "Stop wasting money.";
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-32 relative overflow-hidden">
@@ -66,7 +66,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-royal-garnet animate-pulse" />
           <span className="text-sm text-royal-garnet font-medium">
-            Over 2,000 launches powered
+            The average person wastes $200/year on forgotten subscriptions
           </span>
         </motion.div>
 
@@ -99,8 +99,8 @@ export default function Hero() {
           ref={taglineRef}
           className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 opacity-0"
         >
-          Create beautiful waitlist pages in minutes. Capture emails, reward
-          referrals, and build anticipation before you launch.
+          Track all your subscriptions in one place. Get reminders before
+          renewals. Cancel the ones you forgot about. Save money effortlessly.
         </p>
 
         {/* CTA Buttons */}
@@ -111,12 +111,12 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <motion.a
-            href="/create"
+            href="/add"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 bg-royal-garnet text-white text-base font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
           >
-            Create Your Waitlist
+            Start Tracking Free
           </motion.a>
           <motion.a
             href="/dashboard"
@@ -129,14 +129,36 @@ export default function Hero() {
         </motion.div>
 
         {/* Social proof */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.6 }}
-          className="mt-8 text-sm text-text-secondary"
+          className="mt-8"
         >
-          Free plan available · No credit card required
-        </motion.p>
+          <p className="text-sm text-text-secondary mb-4">
+            Free forever · No credit card · Works offline
+          </p>
+          <div className="flex items-center justify-center gap-6 text-text-secondary">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm">20+ services</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm">Renewal alerts</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm">Cancel links</span>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

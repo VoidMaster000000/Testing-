@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  "50,000+ waitlist signups collected",
-  "2,000+ successful launches",
-  "98% customer satisfaction",
-  "150+ countries reached",
-  "10M+ referral links shared",
-  "500K+ emails captured monthly",
+  "Average user saves $240/year",
+  "Track Netflix, Spotify, Adobe & more",
+  "20+ popular services pre-loaded",
+  "One-click cancel links included",
+  "100% privacy - no bank connections",
+  "Works offline - data stays local",
 ];
 
 export default function Marquee() {

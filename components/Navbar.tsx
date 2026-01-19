@@ -10,8 +10,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const navLinks = [
   { href: "#features", label: "Features" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "/dashboard", label: "Dashboard" },
 ];
 
 export default function Navbar() {
@@ -21,6 +20,11 @@ export default function Navbar() {
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
+    // Only handle hash links with GSAP
+    if (!href.startsWith("#")) {
+      return; // Let the browser handle regular navigation
+    }
+
     e.preventDefault();
     setActiveLink(href);
 
@@ -48,7 +52,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-semibold text-text-primary">
-          Waitly
+          SubTrackr
         </Link>
 
         {/* Nav Links */}
@@ -80,12 +84,12 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <motion.a
-          href="/create"
+          href="/add"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="px-5 py-2.5 bg-royal-garnet text-white text-sm font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
         >
-          Start Free
+          Start Tracking
         </motion.a>
       </div>
     </motion.nav>
