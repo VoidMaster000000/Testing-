@@ -244,12 +244,20 @@ export default function Dashboard() {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-4">
-                            <div
-                              className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-semibold text-lg"
-                              style={{ backgroundColor: sub.color || "#7B2D42" }}
-                            >
-                              {sub.name.charAt(0)}
-                            </div>
+                            {sub.logo ? (
+                              <img
+                                src={sub.logo}
+                                alt={sub.name}
+                                className="w-12 h-12 rounded-xl object-contain bg-white p-1.5 border border-border"
+                              />
+                            ) : (
+                              <div
+                                className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-semibold text-lg"
+                                style={{ backgroundColor: sub.color || "#7B2D42" }}
+                              >
+                                {sub.name.charAt(0)}
+                              </div>
+                            )}
                             <div>
                               <h3 className="font-medium text-text-primary">
                                 {sub.name}
@@ -344,12 +352,20 @@ export default function Dashboard() {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-4">
-                            <div
-                              className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-semibold text-lg"
-                              style={{ backgroundColor: sub.color || "#7B2D42" }}
-                            >
-                              {sub.name.charAt(0)}
-                            </div>
+                            {sub.logo ? (
+                              <img
+                                src={sub.logo}
+                                alt={sub.name}
+                                className="w-12 h-12 rounded-xl object-contain bg-white p-1.5 border border-border"
+                              />
+                            ) : (
+                              <div
+                                className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-semibold text-lg"
+                                style={{ backgroundColor: sub.color || "#7B2D42" }}
+                              >
+                                {sub.name.charAt(0)}
+                              </div>
+                            )}
                             <div>
                               <h3 className="font-medium text-text-primary">
                                 {sub.name}

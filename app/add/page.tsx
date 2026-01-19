@@ -83,6 +83,7 @@ export default function AddSubscription() {
       cancelUrl: cancelUrl.trim() || undefined,
       notes: notes.trim() || undefined,
       color: selectedService?.color,
+      logo: selectedService?.logo,
     });
 
     setTimeout(() => {
@@ -153,8 +154,19 @@ export default function AddSubscription() {
                     className="p-4 bg-background rounded-xl border border-border hover:border-royal-garnet/30 transition-colors text-left"
                   >
                     <div className="flex items-center gap-3">
+                      {service.logo ? (
+                        <img
+                          src={service.logo}
+                          alt={service.name}
+                          className="w-10 h-10 rounded-lg object-contain bg-white p-1"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                          }}
+                        />
+                      ) : null}
                       <div
-                        className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-semibold"
+                        className={`w-10 h-10 rounded-lg flex items-center justify-center text-white font-semibold ${service.logo ? 'hidden' : ''}`}
                         style={{ backgroundColor: service.color || "#7B2D42" }}
                       >
                         {service.name?.charAt(0)}
@@ -192,12 +204,20 @@ export default function AddSubscription() {
               {/* Service Badge */}
               {selectedService && (
                 <div className="flex items-center gap-3 p-4 bg-cashmere-light/30 rounded-xl">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-semibold text-lg"
-                    style={{ backgroundColor: selectedService.color || "#7B2D42" }}
-                  >
-                    {selectedService.name?.charAt(0)}
-                  </div>
+                  {selectedService.logo ? (
+                    <img
+                      src={selectedService.logo}
+                      alt={selectedService.name}
+                      className="w-12 h-12 rounded-xl object-contain bg-white p-1.5"
+                    />
+                  ) : (
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-semibold text-lg"
+                      style={{ backgroundColor: selectedService.color || "#7B2D42" }}
+                    >
+                      {selectedService.name?.charAt(0)}
+                    </div>
+                  )}
                   <div>
                     <p className="font-medium text-text-primary">
                       {selectedService.name}
