@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAFAF8;
+  --surface: #F5F0EB;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6B6B;
+  --accent: #2D2D2D;
+  --border: #E5E0DB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--accent);
+  color: var(--background);
+}
