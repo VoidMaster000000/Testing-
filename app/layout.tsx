@@ -71,6 +71,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://subtrackr-swart-five.vercel.app",
   },
+  verification: {
+    google: "Gr5kydpfT3pWqf8Fr48VZnk8A_J-mgjiY7uMvFyt8Es",
+  },
   category: "Finance",
 };
 
