@@ -79,10 +79,10 @@ export default function Features() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group p-8 rounded-2xl bg-surface/50 border border-border hover:border-text-secondary/20 transition-colors duration-300"
+              className="group p-8 rounded-2xl bg-cashmere-light/20 border border-border hover:border-royal-garnet/20 transition-colors duration-300"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center text-text-primary mb-6 group-hover:border-text-secondary/30 transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center text-royal-garnet mb-6 group-hover:border-royal-garnet/30 group-hover:bg-royal-garnet/5 transition-colors duration-300">
                 <feature.icon className="w-5 h-5" strokeWidth={1.5} />
               </div>
 

@@ -55,8 +55,8 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-32 relative overflow-hidden">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface/50 to-background pointer-events-none" />
+      {/* Subtle gradient background with cashmere tint */}
+      <div className="absolute inset-0 bg-gradient-to-b from-cashmere-light/30 to-background pointer-events-none" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Headline with GSAP word animation */}
@@ -102,14 +102,14 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-accent text-background text-base font-medium rounded-full hover:bg-text-primary transition-colors duration-200"
+            className="px-8 py-4 bg-royal-garnet text-white text-base font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
           >
             Start Free Trial
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-transparent text-text-primary text-base font-medium rounded-full border border-border hover:bg-surface transition-colors duration-200"
+            className="px-8 py-4 bg-transparent text-royal-garnet text-base font-medium rounded-full border border-royal-garnet/30 hover:bg-cashmere-light/30 transition-colors duration-200"
           >
             Watch Demo
           </motion.button>

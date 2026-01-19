@@ -82,7 +82,7 @@ export default function Marquee() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-16 bg-surface/50 border-y border-border overflow-hidden"
+      className="py-16 bg-cashmere-light/30 border-y border-border overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6 mb-8">
         <p className="text-center text-sm text-text-secondary">
@@ -93,8 +93,8 @@ export default function Marquee() {
       {/* Marquee container */}
       <div className="relative">
         {/* Gradient masks for smooth edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface/50 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface/50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-cashmere-light/30 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-cashmere-light/30 to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling content */}
         <div className="flex animate-marquee">

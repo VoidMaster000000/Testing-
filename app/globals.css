@@ -1,17 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAFAF8;
-  --surface: #F5F0EB;
-  --text-primary: #1A1A1A;
-  --text-secondary: #6B6B6B;
-  --accent: #2D2D2D;
-  --border: #E5E0DB;
+  /* Cashmere & Royal Garnet Theme */
+  --background: #FDF9F6;
+  --surface: #F5EBE4;
+  --cashmere: #E6BEA5;
+  --cashmere-light: #F0D5C4;
+  --royal-garnet: #7B2D42;
+  --royal-garnet-light: #9B4A5E;
+  --royal-garnet-dark: #5C1F31;
+  --text-primary: #2D1F1A;
+  --text-secondary: #6B5750;
+  --accent: #7B2D42;
+  --border: #E8D9D0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
+  --color-cashmere: var(--cashmere);
+  --color-cashmere-light: var(--cashmere-light);
+  --color-royal-garnet: var(--royal-garnet);
+  --color-royal-garnet-light: var(--royal-garnet-light);
+  --color-royal-garnet-dark: var(--royal-garnet-dark);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-accent: var(--accent);
@@ -46,6 +57,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: var(--accent);
+  background-color: var(--royal-garnet);
   color: var(--background);
 }

@@ -61,10 +61,10 @@ export default function CTA() {
       ref={sectionRef}
       className="relative py-32 px-6 overflow-hidden"
     >
-      {/* Animated background */}
+      {/* Animated background with cashmere gradient */}
       <div
         ref={bgRef}
-        className="absolute inset-0 bg-gradient-to-br from-surface via-background to-surface/80"
+        className="absolute inset-0 bg-gradient-to-br from-cashmere-light/40 via-background to-cashmere/20"
       />
 
       {/* Content */}
@@ -90,12 +90,12 @@ export default function CTA() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full sm:flex-1 px-5 py-4 rounded-full bg-background border border-border text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:border-text-secondary/40 transition-colors duration-200"
+            className="w-full sm:flex-1 px-5 py-4 rounded-full bg-background border border-border text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:border-royal-garnet/40 focus:ring-2 focus:ring-royal-garnet/10 transition-all duration-200"
           />
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full sm:w-auto px-8 py-4 bg-accent text-background text-base font-medium rounded-full hover:bg-text-primary transition-colors duration-200 whitespace-nowrap"
+            className="w-full sm:w-auto px-8 py-4 bg-royal-garnet text-white text-base font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200 whitespace-nowrap"
           >
             Get Started
           </motion.button>

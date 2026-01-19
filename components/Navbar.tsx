@@ -63,7 +63,7 @@ export default function Navbar() {
               {link.label}
               {/* Animated underline */}
               <motion.span
-                className="absolute -bottom-1 left-0 h-0.5 bg-text-primary rounded-full"
+                className="absolute -bottom-1 left-0 h-0.5 bg-royal-garnet rounded-full"
                 initial={{ width: 0 }}
                 variants={{
                   hover: { width: "100%" },
@@ -79,7 +79,7 @@ export default function Navbar() {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="px-5 py-2.5 bg-accent text-background text-sm font-medium rounded-full hover:bg-text-primary transition-colors duration-200"
+          className="px-5 py-2.5 bg-royal-garnet text-white text-sm font-medium rounded-full hover:bg-royal-garnet-dark transition-colors duration-200"
         >
           Get Started
         </motion.button>

@@ -20,13 +20,13 @@ export default function Home() {
             2025 Streamline. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+            <a href="#" className="text-sm text-text-secondary hover:text-royal-garnet transition-colors">
               Privacy
             </a>
-            <a href="#" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+            <a href="#" className="text-sm text-text-secondary hover:text-royal-garnet transition-colors">
               Terms
             </a>
-            <a href="#" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+            <a href="#" className="text-sm text-text-secondary hover:text-royal-garnet transition-colors">
               Contact
             </a>
           </div>
